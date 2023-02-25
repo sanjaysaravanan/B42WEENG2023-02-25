@@ -1,0 +1,29 @@
+Topics:
+
+  Recap:
+    async & await --> which makes fews async operations synchronous inside an    aysnc block await helps in doing so
+      return type: promise which contains the return obj ( not suggested to return anything from a async func )
+
+    Publics APIs - Open Source APIs which gives data about common information
+      Look for You requirement & Choose a type of API
+      Use APIs which has HTTPS & CORS --> Cross Origin Resources Sharing enabled
+      If Signing is fine Go for Auth, HTTPS, CORS enabled
+      CORS -> Cross Origin Resource Sharing
+    
+    Google APIs
+      https://console.cloud.google.com/
+      Create a Project
+      API Credentials
+      New Credentials -> New API Key
+      Copy the Key 
+      Go to Enale API & Services
+        Search Youtube API V3 and enable it
+    Search
+    Pagination -> pagination in APIs
+
+  Mock APIs --> A Mocked Server/Backend setup which support the Client to perform CRUD operations from UI
+  CRUD Operations on Resources
+  Read ( GET ) all, particular ---> Read all/specific entity
+  Create ( POST ) --> Create a new entity
+  Update ( PUT ) --> Update a particular entity
+  Delete ( DELETE ) --> Delete a particular entity

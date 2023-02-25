@@ -29,6 +29,8 @@ Topics:
     Pagination -> pagination in APIs
     Search --> search using APIs
 
+    Refer: google-apis,public-apis files
+
   Mock APIs --> A Mocked Server/Backend setup which support the Client to perform CRUD operations from UI
 
   CRUD Operations on Resources
@@ -36,6 +38,8 @@ Topics:
   Create ( POST ) --> Create a new entity
   Update ( PUT ) --> Update a particular entity
   Delete ( DELETE ) --> Delete a particular entity
+  website: https://mockapi.io/
+  Refer: mock-apis files
 
 Work For Candidates:
   Investigate and Learn on Local and Session Storage

@@ -18,12 +18,24 @@ Topics:
       Copy the Key 
       Go to Enale API & Services
         Search Youtube API V3 and enable it
-    Search
+
+    query param: https://<some-api>.com/characters?page=1&name=mickey
+      query params --> page, name
+
+    path param: https://<some-api>.com/characters/mickey
+                https://<some-api>.com/characters/donald
+        eg: name --> mickey, donald
+    
     Pagination -> pagination in APIs
+    Search --> search using APIs
 
   Mock APIs --> A Mocked Server/Backend setup which support the Client to perform CRUD operations from UI
+
   CRUD Operations on Resources
   Read ( GET ) all, particular ---> Read all/specific entity
   Create ( POST ) --> Create a new entity
   Update ( PUT ) --> Update a particular entity
   Delete ( DELETE ) --> Delete a particular entity
+
+Work For Candidates:
+  Investigate and Learn on Local and Session Storage

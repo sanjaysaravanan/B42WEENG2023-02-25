@@ -16,20 +16,47 @@ var globalVideos = [];
 
 const videosArea = document.getElementById('videos-area');
 
-const getVideos = async () => {
-  const resposne = await fetch(`https://www.googleapis.com/youtube/v3/videos?key=${API_KEY}&chart=mostPopular`);
-  const { items: videos } = await resposne.json();
+var nextPage = undefined;
+
+var prevPage = undefined;
+
+const getVideos = async (pageToken) => {
+  var resposne;
+  if (pageToken) {
+    resposne = await fetch(`https://www.googleapis.com/youtube/v3/videos?key=${API_KEY}&chart=mostPopular&pageToken=${pageToken}`);
+  } else {
+    resposne = await fetch(`https://www.googleapis.com/youtube/v3/videos?key=${API_KEY}&chart=mostPopular`);
+  }
+
+
+
+  const { items: videos, nextPageToken, prevPageToken } = await resposne.json();
+
+  videosArea.innerHTML = '';
+
+
+  nextPage = nextPageToken;
+  prevPage = prevPageToken;
   //   <iframe width="420" height="345" src="https://www.youtube.com/embed/jZGpkLElSu8"">
   // </iframe>
   videos.forEach(({ id }) => {
     const frameElement = document.createElement('iframe');
-    // frameElement.classList.add('rounded');
-    // frameElement.classList.add('m-1');
+    frameElement.classList.add('rounded');
+    frameElement.classList.add('m-1');
     frameElement.setAttribute('height', '200');
     frameElement.setAttribute('width', '250');
     frameElement.setAttribute('src', `https://www.youtube.com/embed/${id}`);
     videosArea.appendChild(frameElement);
   })
 }
+
+const nextPageFunc = () => {
+  getVideos(nextPage);
+}
+
+const prevPageFunc = () => {
+  getVideos(prevPage);
+}
+
 
 getVideos();
